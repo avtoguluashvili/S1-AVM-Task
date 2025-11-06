@@ -28,11 +28,11 @@ public class AzureVmService : IAzureVmService
         
         try
         {
-            // Use DefaultAzureCredential with multiple fallback options
             _logger.LogInformation("Attempting to authenticate with Azure...");
             
             var credentialOptions = new DefaultAzureCredentialOptions
             {
+                TenantId = _settings.TenantId,
                 ExcludeEnvironmentCredential = false,
                 ExcludeWorkloadIdentityCredential = true,
                 ExcludeManagedIdentityCredential = true,
@@ -47,12 +47,23 @@ public class AzureVmService : IAzureVmService
             var credential = new DefaultAzureCredential(credentialOptions);
             _armClient = new ArmClient(credential);
             
-            _logger.LogInformation("Azure ARM Client initialized successfully");
+            if (!string.IsNullOrEmpty(_settings.TenantId))
+            {
+                _logger.LogInformation("Azure ARM Client initialized successfully with tenant {TenantId}", _settings.TenantId);
+            }
+            else
+            {
+                _logger.LogInformation("Azure ARM Client initialized successfully (auto-detecting tenant)");
+            }
+            
+            _logger.LogInformation("Authentication will try: Azure CLI → Visual Studio → Shared Token Cache");
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Failed to initialize Azure ARM Client");
-            _logger.LogWarning("Make sure you're authenticated with 'az login' or Connect-AzAccount");
+            _logger.LogWarning("Make sure you're authenticated:");
+            _logger.LogWarning("  - Azure CLI: az login");
+            _logger.LogWarning("  - Visual Studio: Sign in via File → Account Settings");
             throw;
         }
     }
@@ -293,4 +304,3 @@ public class AzureVmService : IAzureVmService
         }
     }
 }
-

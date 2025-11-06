@@ -11,8 +11,5 @@ public class AppSettings
     public string AutoShutdownTagName { get; set; } = "Autoshutdown";
     public string AutoShutdownTagValue { get; set; } = "1";
     public string? SubscriptionId { get; set; }
+    public string? TenantId { get; set; }
 }
-
-
-
-

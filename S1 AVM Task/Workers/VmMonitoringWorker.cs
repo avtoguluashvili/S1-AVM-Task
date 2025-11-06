@@ -97,4 +97,3 @@ public class VmMonitoringWorker : BackgroundService
         _logger.LogInformation("VM Monitoring Worker stopped");
     }
 }
-

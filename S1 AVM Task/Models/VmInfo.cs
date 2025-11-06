@@ -14,7 +14,3 @@ public class VmInfo
     public string VmId { get; set; } = string.Empty;
     public DateTime? StartTime { get; set; }
 }
-
-
-
-

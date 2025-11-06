@@ -117,4 +117,3 @@ public class VmPowerManagementService : IVmPowerManagementService
         return powerState.Equals("stopped", StringComparison.OrdinalIgnoreCase);
     }
 }
-

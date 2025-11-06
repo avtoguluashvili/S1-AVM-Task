@@ -85,4 +85,3 @@ public class CsvWriterService : ICsvWriterService
         return field;
     }
 }
-
