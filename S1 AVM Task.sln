@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S1 AVM Task", "S1 AVM Task\S1 AVM Task.csproj", "{614854D0-85CB-428C-A8FC-9BDCE08D391C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{614854D0-85CB-428C-A8FC-9BDCE08D391C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{614854D0-85CB-428C-A8FC-9BDCE08D391C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{614854D0-85CB-428C-A8FC-9BDCE08D391C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{614854D0-85CB-428C-A8FC-9BDCE08D391C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59550358-8211-4690-9978-942A407F2EDB}
+	EndGlobalSection
+EndGlobal
